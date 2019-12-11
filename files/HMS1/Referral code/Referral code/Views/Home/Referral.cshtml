@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <form>
+            <fieldset>
+                <legend></legend>
+                <div class="container-fluid left">
+                    <label asp-for="Refering_Doc">Refering Doctor</label>
+                    <input type="text" name="FirstName" value=""><br>
+                    <label asp-for="DW_Doc">D/W DR</label>
+                    <input type="text" name="D/W" value=""><br>
+
+                    <label asp-for="Team">Team</label>
+                    <input type="text" name="Team" value=""><br>
+
+                    <label asp-for="DateOfFUC">DAte of FUC Appointment</label>
+                    <input type="text" name="DateOfFUC" value=""><br>
+
+                </div>
+            </fieldset>
+        </form><br>
+
+        <div>
+            <label>BACKGROUNG HISTORY</label><br>
+            <textarea rows="4" cols="120"></textarea><br><br>
+
+            <label>REASON FOR CURRENT REFERRAL</label><br>
+            <textarea rows="4" cols="120"></textarea><br><br>
+
+            <label>TREATMENT PRESCRIBED FOR CURRENT PROBLEM</label><br>
+            <textarea rows="4" cols="120"></textarea><br><br>
+
+            <label>INVESTIGATION DONE: (Please provide results)</label><br>
+            <textarea rows="4" cols="120"></textarea><br><br><br>
+
+            <label asp-for="Doc_signatrue">REFERRAL DOCTOR'S SIGNATURE</label><br>
+            <input type="text" name="D/W" value=""><br><br><br>
+
+            <label asp-for="DATE">DATE:</label>
+            <input type="date" name="bday">
+            <input type="submit">
+
+
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-primary" type="submit">Save</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+
+
+    
+    </div>
+</body>
+</html>

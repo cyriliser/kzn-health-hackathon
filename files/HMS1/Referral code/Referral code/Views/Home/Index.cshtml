@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <div class="text-center">
+        <h2>REFERRAL TO KING EDWARD FOLLOW UP CLINIC</h2>
+        @*<p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+    </div>
+</div>
+
+<form asp-action="Referral" method="post">
+    <fieldset>
+        <legend>Patient information</legend>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label asp-for="Patient_name">Patient Name</label>
+                    <div><span asp-validation-for="Patient_Name" class="text-danger"></span></div>
+                    <input asp-for="Patient_Name" class="form-control" size="3" maxlength="15" />
+                </div>
+                <div class="col-md-8 form-group">
+                    <label asp-for="OP_File_Number">OP File Number</label>
+                    <div><span asp-validation-for="OP_File_Number" class="text-danger"></span></div>
+                    <input asp-for="Patient_Name" class="form-control" maxlength="15" size="3" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label asp-for="Age">Age</label>
+                    <div><span asp-validation-for="Age" class="text-danger"></span></div>
+                    <input asp-for="Age" class="form-control" size="3" maxlength="15" />
+                </div>
+
+
+                <div class="col-md-8 form-group">
+                    <label>Sex</label> <!--Drop down for the patients sex-->
+                    <div><span asp-validation-for="Sex" class="text-danger"></span></div>
+                    <select name="Sex" id="drpdownSex">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="Address">Address</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <p><input class="form-control" type="text" name="streetname" value="Street name" size="5" style="color:LightGray"><br></p>
+                    <p><input class="form-control" type="text" name="areaname" value="Area name" style="color:LightGray"><br></p>
+                    <p><input class="form-control" type="text" name="city" value="City/Town" style="color:LightGray"><br></p>
+                    <p><input class="form-control" type="text" name="Postalcode" value="Postal code" style="color:LightGray"><br></p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label asp-for="Telephone">Telephone</label>
+                    <div><span asp-validation-for="Age" class="text-danger"></span></div>
+                    <input asp-for="Age" class="form-control" size="3" maxlength="15" />
+                </div>
+    </fieldset>
+</form>
+
+<br>
+
+<form>
+    <fieldset>
+        <legend></legend>
+        <div class="container-fluid left">
+            <label asp-for="Refering_Doc">Refering Doctor</label>
+                <input  type="text" name="FirstName" value=""><br>
+            <label asp-for="DW_Doc">D/W DR</label>
+            <input type="text" name="D/W" value=""><br>
+
+            <label asp-for="Team">Team</label>
+            <input type="text" name="Team" value=""><br>
+
+            <label asp-for="DateOfFUC">DAte of FUC Appointment</label>
+            <input type="text" name="DateOfFUC" value=""><br>
+
+        </div>
+    </fieldset>
+</form><br>
+
+<div>
+    <label>BACKGROUNG HISTORY</label><br>
+    <textarea  rows="4" cols="120"></textarea><br><br>
+
+    <label>REASON FOR CURRENT REFERRAL</label><br>
+    <textarea rows="4" cols="120"></textarea><br><br>
+
+    <label>TREATMENT PRESCRIBED FOR CURRENT PROBLEM</label><br>
+    <textarea rows="4" cols="120"></textarea><br><br>
+
+    <label>INVESTIGATION DONE: (Please provide results)</label><br>
+    <textarea rows="4" cols="120"></textarea><br><br><br>
+
+    <label asp-for="Doc_signatrue">REFERRAL DOCTOR'S SIGNATURE</label><br>
+    <input type="text" name="D/W" value=""><br><br><br>
+
+    <label asp-for="DATE">DATE:</label>
+    <input type="date" name="bday">
+    <input type="submit">
+
+
+</div>
+
+<div class="text-center">
+    <button class="btn btn-primary" type="submit">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</div>
+
+
+
