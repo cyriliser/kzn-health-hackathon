@@ -67,6 +67,8 @@
       ?>
 
 
+
+
       <form>
         <div class="inner-form">
 
@@ -83,7 +85,9 @@
         </div>
       </form>
 
+      <!-- patient Details -->
       <?php 
+
         if (isset($patient_details)) {
           ?>
 
